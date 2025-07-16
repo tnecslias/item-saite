@@ -1,0 +1,523 @@
+@charset "UTF-8";
+
+/* グローバル設定 */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #f4f5f1;
+  font-family: "Lato", "Noto Sans JP", "游ゴシック Medium", "游ゴシック体",
+    "Yu Gothic Medium", YuGothic, sans-serif;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #4c4993;
+  margin-bottom: 5rem;
+  text-align: center;
+  margin-top: 140px;
+}
+
+/* ヘッダー設定 */
+.header {
+  position: relative;
+  width: 100%;
+  height: 780px;
+  overflow: hidden;
+  background-color: #bfc9eb;
+}
+
+.slideshow {
+  position: absolute;
+  top: 87px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.slides {
+  display: flex;
+  animation: scroll 60s linear infinite;
+}
+
+.slides img {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-6000px);
+  }
+}
+
+/* ナビゲーション */
+.header__navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 87px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2rem;
+  background-color: #bfc9eb;
+}
+
+.header__navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  margin-left: auto;
+  padding: 0;
+  list-style: none;
+}
+
+.header__navigation ul li {
+  width: auto;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+.header__navigation ul li a {
+  position: relative;
+  display: inline-block;
+  color: #4c4993;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header__navigation ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #4c4993;
+  transition: width 0.3s ease;
+}
+
+.header__navigation ul li a:hover::after {
+  width: 100%;
+}
+
+.site-title {
+  margin-left: 40px;
+  font-size: 3.3rem;
+  font-weight: bold;
+  color: #4c4993;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.menu-toggle {
+  display: none; /* デスクトップでは非表示 */
+}
+
+/* メインコンテンツ */
+.topics {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.topics_article {
+  text-align: center;
+  width: calc((100% - 2rem) / 3);
+}
+
+.topics_article h3 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #000000;
+  margin: 1rem;
+}
+
+.end h3 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.topics_article p,
+.end p {
+  font-size: 1.2rem;
+  line-height: 1.75;
+}
+
+.topics_article a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.topics_article a img {
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  border-radius: 16px;
+}
+
+.topics_article a img:hover {
+  filter: brightness(90%);
+}
+
+.concept,
+.shop,
+.faq {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* 横並びにするためのコンテナ */
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.product h3 {
+  margin: 1px;
+}
+
+.product_article {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+}
+
+.product_article img {
+  width: 300px;
+  height: 300px;
+  border-radius: 16px;
+}
+
+.concept p {
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #333;
+}
+
+.learn-more {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1.5rem 2.5rem;
+  background-color: #4c4993;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  border-radius: 16px;
+  transition: background-color 0.4s ease;
+}
+
+.learn-more:hover {
+  filter: brightness(90%);
+}
+
+.learn-more-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.end {
+  display: flex;
+  justify-content: center;
+  gap: 130px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.shop_section,
+.faq_section {
+  width: 300px;
+  text-align: center;
+}
+
+.shop_article img,
+.faq_article img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.shop_article:hover,
+.faq_article:hover {
+  filter: brightness(90%);
+}
+
+/* フッター */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  line-height: 1.6;
+  border-top: solid 2px #eee;
+}
+
+.footer__address {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.footer__address span {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #4c4993;
+}
+
+.footer__copyright {
+  font-size: 1.4rem;
+  color: #4c4993;
+}
+
+.footer__sns {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.footer__sns a {
+  font-size: 2.4rem;
+  color: #4c4993;
+  transition: color 0.3s;
+}
+
+.footer__sns a:hover {
+  color: #0d0c19;
+}
+
+/* Media Query スマホ設定 */
+@media (max-width: 960px) {
+  html {
+    font-size: 55%;
+  }
+
+  h2 {
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+  }
+
+  .header {
+    height: 310px;
+  }
+
+  .slideshow {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .slides {
+    display: flex;
+    animation: scroll 60s linear infinite;
+  }
+
+  .slides img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-2700px);
+    }
+  }
+
+  .header__navigation {
+    position: fixed;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 40px;
+    padding: 0 0.5rem;
+    z-index: 100;
+  }
+
+  .site-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    margin: 0;
+    white-space: nowrap;
+    color: #4c4993;
+  }
+
+  .header__navigation ul li {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .header__navigation ul li a {
+    font-size: 0.8rem;
+  }
+
+  .header__navigation ul,
+  #nav-menu {
+    display: none;
+  }
+
+  /* ハンバーガーメニューが開いたときだけ表示 */
+  #nav-menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 100%;
+    background-color: #bfc9eb;
+    z-index: 20;
+  }
+
+  /* ハンバーガーアイコン表示 */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    margin-right: 1.5rem;
+  }
+
+  .menu-toggle span {
+    display: block;
+    height: 4px;
+    background-color: #4c4993;
+    border-radius: 2px;
+  }
+  .topics {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .topics_article {
+    width: 250px;
+    margin: 2rem;
+  }
+
+  .topics_article a img {
+    width: 100%;
+    height: auto;
+  }
+
+  .concept {
+    width: 300px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+
+  .product {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product_article {
+    width: 250px;
+  }
+
+  .product_article img {
+    width: 100%;
+    height: auto;
+  }
+
+  .learn-more-container {
+    margin: 0;
+  }
+  .learn-more {
+    margin: 0;
+  }
+
+  .end {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 0px;
+  }
+
+  .shop_section,
+  .faq_section {
+    width: 260px;
+    text-align: center;
+  }
+
+  .shop_article img,
+  .faq_article img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+  }
+
+  .footer {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .footer__sns {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .footer__sns a {
+    font-size: 2rem;
+  }
+
+  .footer__address span {
+    font-size: 2rem;
+  }
+
+  .footer__address,
+  .footer__copyright {
+    font-size: 1.2rem;
+  }
+}
