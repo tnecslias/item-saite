@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="slideshow">
+        <div class="slides">
+          <img src="images/header1.jpg" alt="" />
+          <img src="images/header2.jpg" alt="" />
+          <img src="images/product1.jpg" alt="" />
+          <img src="images/product2.jpg" alt="" />
+          <img src="images/product3.jpg" alt="" />
+          <img src="images/product4.jpg" alt="" />
+          <!-- 無限ループ用にもう1セット複製 -->
+          <img src="images/header1.jpg" alt="" />
+          <img src="images/header2.jpg" alt="" />
+          <img src="images/product1.jpg" alt="" />
+          <img src="images/product2.jpg" alt="" />
+          <img src="images/product3.jpg" alt="" />
+          <img src="images/product4.jpg" alt="" />
+        </div>
+      </div>
+
+      <nav class="header__navigation">
+        <a href="index.html" class="site-title">honoka select shop◢⁴⁶</a>
+
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul id="nav-menu">
+          <li><a href="#concept">CONCEPT</a></li>
+          <li><a href="#product">PRODUCT</a></li>
+          <li><a href="#topics">TOPICS</a></li>
+          <li><a href="#shop">SHOP</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2 id="topics">TOPICS</h2>
+      <div class="topics">
+        <article class="topics_article">
+          <a href="#">
+            <img src="images/pic_01.jpg" alt="乃木坂グッズのイメージ画像" />
+          </a>
+          <h3>乃木坂46</h3>
+          <p>
+            与田祐希、5期生のグッズを扱っています。<br />
+            Tシャツ、トートバック、マフラータオルetc...
+          </p>
+        </article>
+
+        <article class="topics_article">
+          <a href="#">
+            <img src="images/pic_02.jpg" alt="日向坂グッズのイメージ画像" />
+          </a>
+          <h3>日向坂46</h3>
+          <p>
+            加藤史帆、正源司陽子のグッズを扱っています。<br />
+            Tシャツ、マフラータオルetc...
+          </p>
+        </article>
+        <article class="topics_article">
+          <a href="#">
+            <img src="images/pic_03.jpg" alt="櫻坂グッズのイメージ画像" />
+          </a>
+          <h3>櫻坂46</h3>
+          <p>
+            3期生のグッズを扱っています。<br />
+            Tシャツ、マフラータオル、ショルダーバッグetc...
+          </p>
+        </article>
+      </div>
+
+      <h2 id="concept">CONCEPT</h2>
+      <article class="concept">
+        <p>
+          坂道グループはメンバーだけでなく、グッズもかわいい！<br /><br />
+          グッズは、シングルCDリリース、ライブごとに発売されます。<br />
+          生誕グッズや卒コングッズなど豊富に取り揃えています。
+        </p>
+      </article>
+
+      <h2 id="product">PRODUCT</h2>
+      <div class="product">
+        <article class="product_article">
+          <img src="images/product1.jpg" />
+          <h3>最強⭐︎としちゃんのロックTシャツ</h3>
+        </article>
+
+        <article class="product_article">
+          <img src="images/product2.jpg" />
+          <h3>真夏の全国ツアー2023 Tシャツ</h3>
+        </article>
+
+        <article class="product_article">
+          <img src="images/product3.jpg" />
+          <h3>君しか勝たん 加藤史帆 マフラータオル</h3>
+        </article>
+
+        <article class="product_article">
+          <img src="images/product4.jpg" />
+          <h3>与田祐希卒業コンサート トートバッグ</h3>
+        </article>
+      </div>
+      <div class="learn-more-container">
+        <a href="#" class="learn-more">MORE　→</a>
+      </div>
+
+      <div class="end">
+        <section class="shop_section" id="shop">
+          <h2>SHOP</h2>
+          <article class="shop_article">
+            <h3>公式サイトはこちら</h3>
+            <img src="images/shop.jpg" />
+          </article>
+        </section>
+
+        <section class="faq_section" id="faq">
+          <h2>FAQ</h2>
+          <article class="faq_article">
+            <h3>ご質問はこちら</h3>
+            <img src="images/faq.jpg" />
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__address">
+        <span>honoka select shop◢⁴⁶</span>
+      </div>
+      <div class="footer__sns">
+        <a href="https://x.com" target="_blank"
+          ><i class="fab fa-x-twitter"></i
+        ></a>
+        <a href="https://www.instagram.com" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.tiktok.com" target="_blank"
+          ><i class="fab fa-tiktok"></i
+        ></a>
+      </div>
+      <div class="footer__copyright">Copyright 2025 honoka</div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const navMenu = document.getElementById("nav-menu");
+
+      toggle.addEventListener("click", () => {
+        navMenu.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
